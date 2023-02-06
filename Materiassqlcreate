@@ -1,0 +1,9 @@
+CREATE TABLE Materias (
+    Materia VARCHAR(255) NULL,
+    Nombre VARCHAR(255) NULL,
+    Abreviatura1 VARCHAR(255) NULL,
+    Abreviatura2 VARCHAR(255) NULL,
+    Abreviatura VARCHAR(255) NULL,
+    Departamento VARCHAR(255) NULL
+);
+∫
