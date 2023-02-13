@@ -3,7 +3,7 @@ package com.adorno.modeloUno;
 import jakarta.persistence.Entity;
 import jakarta.persistence.MappedSuperclass;
 
-@Entity
+//@Entity
 public  class ConcreteEntity extends AbstractEntity {
 	private String description;
 
