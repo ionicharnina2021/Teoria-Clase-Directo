@@ -19,6 +19,10 @@ public class Monitor {
 		super();
 		this.apodo = apodo;
 	}
+
+	private Monitor() {
+		super();
+	}
 	
 	
 
