@@ -4,10 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
 @Entity
 public class Grupo {
@@ -21,7 +17,7 @@ public class Grupo {
 		this.nombre = nombre;
 	}
 
-	private Grupo() {
+	public Grupo() {
 		super();
 	}
 	
