@@ -9,11 +9,12 @@ import com.adorno.model.Person;
 import com.adorno.services.interfaces.PersonaService;
 
 @Service
-public class PersonaServiceImpl implements PersonaService {
+public class PersonaServiceImp implements PersonaService {
 
 	@Override
 	public List<Person> getPersons() {
-		return List.of(new Person("Ramiro", 1));
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override

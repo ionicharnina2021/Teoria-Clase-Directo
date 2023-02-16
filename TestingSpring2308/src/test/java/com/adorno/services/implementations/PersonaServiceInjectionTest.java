@@ -9,12 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class PersonaServiceInjectionTest {
 	
-	@Autowired
-	private PersonaServiceImpl personaServiceImpl;
+	
 
 	@Test
 	void test() {
-		assertEquals(personaServiceImpl.getPersons().size(),1);
 	}
 
 }

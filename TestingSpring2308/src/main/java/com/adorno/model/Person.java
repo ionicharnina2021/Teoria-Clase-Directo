@@ -22,5 +22,9 @@ public class Person {
     private String name;
     @NonNull
     private int age;
+	public String getName() {
+		return name;
+	}
+    
 
 }
