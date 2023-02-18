@@ -9,10 +9,6 @@ import com.adorno.model.Person;
 
 @Service
 public interface PersonaService {
-	/**
-	 * 
-	 * @return
-	 */
 	 List<Person> getPersons();
 	 Optional<Person> getPersonById();
 	 boolean insertPerson(Person person);

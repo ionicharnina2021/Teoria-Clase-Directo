@@ -19,8 +19,7 @@ public class PersonaServiceImp implements PersonaService {
 
 	@Override
 	public Optional<Person> getPersonById() {
-		// TODO Auto-generated method stub
-		return null;
+		return Optional.of(new Person("Juan", 22));
 	}
 
 	@Override
