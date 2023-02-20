@@ -2,6 +2,7 @@ package com.adorno.controllers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +17,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import com.adorno.mappers.LinkedHashMapItemMapper;
 import com.adorno.modelo.Item;
 
+import movil.MobileFilter;
 import reactor.core.publisher.Mono;
 
 
@@ -56,10 +58,11 @@ class ItemsControllerTest {
 		ResponseEntity<Optional> responseEntity=webClient
 				.get()
 				.uri(uriBuilder->uriBuilder.path("/items/{id}").queryParam("id").build(1))
-				
 				.retrieve()
+				//{"id:1","description":"cosas","checked":false}
 				.toEntity(Optional.class)
 				.block();
+				
 		//Observa (con el debug) que lo que retorna es un ResponseEntity  de Optional
 		//y dentro de este hay un hashMap (si encuentra el id). por lo tanto hay que mapear
 		Optional<Item> optionalMapped = responseEntity.getBody()			
@@ -67,6 +70,40 @@ class ItemsControllerTest {
 		assertEquals(cosas, optionalMapped.get());
 		System.out.println("temino con get de un elemento");
 	}
+//	@Test
+//	void testRetrieveAnElementManyParams() {
+//		ResponseEntity<Optional> responseEntity=webClient
+//				.get()
+//				.uri(uriBuilder->uriBuilder.path("/items/moviles").queryParam("id").queryParam("value").queryParam("lista").build(1,"cosas",new ArrayList()))
+//				.retrieve()
+//				.toEntity(Optional.class)
+//				.block();
+//		//Observa (con el debug) que lo que retorna es un ResponseEntity  de Optional
+//		//y dentro de este hay un hashMap (si encuentra el id). por lo tanto hay que mapear
+//		Optional<Item> optionalMapped = responseEntity.getBody()			
+//				.map((element) -> {return new LinkedHashMapItemMapper().map((LinkedHashMap) element);});
+//		assertEquals(cosas, optionalMapped.get());
+//		System.out.println("temino con get de un elemento");
+//	}
+//	@Test
+//	void testRetrieveAnElementWithFilters() {
+//		MobileFilter mf=new MobileFilter(true);
+//		//mf={"bueno":true}
+//		ResponseEntity<Optional> responseEntity=webClient
+//				.get()
+//				//este esl a uri
+//				.uri(uriBuilder->uriBuilder.path("/items/moviles")
+//						.queryParam("filter").build(mf))
+//				.retrieve()
+//				.toEntity(Optional.class)
+//				.block();
+//		//Observa (con el debug) que lo que retorna es un ResponseEntity  de Optional
+//		//y dentro de este hay un hashMap (si encuentra el id). por lo tanto hay que mapear
+//		Optional<Item> optionalMapped = responseEntity.getBody()			
+//				.map((element) -> {return new LinkedHashMapItemMapper().map((LinkedHashMap) element);});
+//		assertEquals(cosas, optionalMapped.get());
+//		System.out.println("temino con get de un elemento");
+//	}
 
 	 @Test
 	    void testClientPostElementresponseEntity() {
