@@ -8,6 +8,8 @@ public class movil {
  String modelo;
  float precio;
  // tabla procesador : numero de nucleos, modelo, velocidad
- //	tabla de pantalla: pulgadas, tecnologia
+ //	tabla de pantalla:  tecnologia
+ float pulgadas;
+ TecnologiaPantall tec;
 // ancho,alto,grosor
 }
