@@ -10,6 +10,6 @@ public class movil {
  // tabla procesador : numero de nucleos, modelo, velocidad
  //	tabla de pantalla:  tecnologia
  float pulgadas;
- TecnologiaPantall tec;
+// TecnologiaPantall tec;
 // ancho,alto,grosor
 }

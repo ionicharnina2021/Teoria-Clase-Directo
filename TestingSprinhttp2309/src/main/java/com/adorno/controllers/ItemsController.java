@@ -42,7 +42,8 @@ public class ItemsController {
     //otra forma de escribir las rutas
     @GetMapping(value = COMIENZO)
     public Item findStartingWith(@RequestParam String inicial, @RequestParam String terminal,
-                                 @RequestParam Item item) {
+                                 @RequestBody Item item) {
+    	System.out.println();
         return itemService.getItemsStartWith(inicial);
     }
 
