@@ -19,11 +19,12 @@ public class Partido {
 	private int id;
 	private String nombreEquipoUno, nombreEquipoDos;
 
-	@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.EAGER)
+//	(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 //	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "persona_partido", 
-		joinColumns = { @JoinColumn(name = "partido") }
-	, inverseJoinColumns = {@JoinColumn(name = "persona") })
+//	@JoinTable(name = "persona_partido", 
+//		joinColumns = { @JoinColumn(name = "partido") }
+//	, inverseJoinColumns = {@JoinColumn(name = "persona") })
 	private List<Persona> personas;
 
 	public Partido(String nombreEquipoUno, String nombreEquipoDos) {

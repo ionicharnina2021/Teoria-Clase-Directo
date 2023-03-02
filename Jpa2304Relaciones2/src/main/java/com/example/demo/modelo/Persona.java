@@ -18,7 +18,8 @@ public class Persona {
 	private Long id;
 	private String nombre;
 	private String apellidos;
-	@ManyToMany(fetch = FetchType.EAGER,cascade =CascadeType.ALL,mappedBy = "personas")
+	@ManyToMany(mappedBy = "personas")
+//	(fetch = FetchType.EAGER,cascade =CascadeType.ALL,mappedBy = "personas")
 	private List<Partido> partidos=new ArrayList<Partido>();
 	
 	public Persona() {
