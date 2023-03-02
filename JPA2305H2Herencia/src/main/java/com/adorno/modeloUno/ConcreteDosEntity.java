@@ -2,7 +2,7 @@ package com.adorno.modeloUno;
 
 import jakarta.persistence.Entity;
 
-//@Entity
+@Entity
 public class ConcreteDosEntity extends AbstractEntity {
 	private String consecucion;
 
