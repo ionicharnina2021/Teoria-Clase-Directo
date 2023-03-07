@@ -21,7 +21,7 @@ import movil.MobileFilter;
 import reactor.core.publisher.Mono;
 
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+new
 class ItemsControllerTest {
 	
 	WebClient webClient;
